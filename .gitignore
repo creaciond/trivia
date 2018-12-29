@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Mac OS X hidden files
+.DS_Store
+
+# data for projects
+newspaper-flask/example-project/data/*
+!newspaper-flask/example-project/data/corpus.db
+
