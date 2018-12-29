@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Нужные метатеги --->
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- Twitter Bootstrap --->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<title>Газетный корпус: результаты</title>
+	</head>
+
+	<body>
+		<main role="main">
+			<!-- Информация-заголовок -->
+			<div class="jumbotron">
+				<div class="container">
+					<p><h1>Газетный корпус: результаты</h1></p>
+					<p>Ниже отображена информация о статьях, которые попадают под ваш запрос. Если их нет, вы увидите сообщение об этом.</p>
+				</div>
+			</div>
+			<!-- Выдача -->
+			<div class="container">
+				{% if results %}
+					{% for item in results %}
+						<ol>
+							<li>
+								<b>Автор:</b> {{ item["author"] }} <br />
+								<b>Дата:</b> {{ item["publ_date"] }} <br />
+								<b>Название:</b> {{ item["title"] }}<br />
+							</li>
+						</ol>
+					{% endfor %}
+				{% else %}
+					<p>По вашему запросу результатов не найдено.</p>
+				{% endif %}
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Нужные метатеги --->
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- Twitter Bootstrap --->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<title>Газетный корпус: поиск</title>
+	</head>
+
+	<body>
+		<main role="main">
+			<!-- Приветствие пользователя -->
+			<div class="jumbotron">
+				<div class="container">
+					<p><h1>Газетный корпус: поиск</h1></p>
+					<p>Привет! Здесь можно поискать по газетному корпусу. Заполните форму ниже, чтобы начать.</p>
+				</div>
+			</div>
+			
+			<!-- Форма поиска -->
+			<div class="container">
+				<div style="text-align:center">
+					<form action="/results">
+						<div class="row">
+							<div class="col-md-6">
+								<b>Поиск по лемме</b> <br /> <br />
+								<p style="text-align:left">
+									Введите лемму: <input type="text" name="query_lemma" placeholder="лемма">
+								</p>
+							</div>
+								
+							<div class="col-md-6">
+								<b>Поиск по морфологическому признаку</b> <br /> <br />
+								<p style="text-align:left">
+									<b>Обратите внимание:</b> название признака должно быть в соответствии с <i>русскими</i> тегами Mystem (о них подробнее в <a href="https://tech.yandex.ru/mystem/doc/grammemes-values-docpage/">документации Яндекса</a>)<br />
+										Введите признак: <input type="text" name="query_morpho" placeholder="морфология">
+								</p>
+							</div>
+						</div>
+						<br />
+						<br />
+						<p style="text-align:center">
+								<input type="submit" class="btn btn-lg btn-primary" value="Искать!">
+						</p>
+					</form>
+				</div>
+			</div>
+			
+		</main>
+	</body>
+</html>
